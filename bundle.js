@@ -3075,7 +3075,6 @@ exports.removePiecePlayerFast = function (cellNumber, piece, isWhite) {
     var targetImg = document.querySelector("." + piece + color + "Img" + cellNumber);
     if (targetImg) {
         targetImg.style.display = 'none;';
-        targetImg.classList.remove('apply-wrong-cell');
     }
 };
 /**

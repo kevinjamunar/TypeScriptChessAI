@@ -144,7 +144,6 @@ export const removePiecePlayerFast = (cellNumber: string, piece: string, isWhite
     let targetImg: HTMLElement | null = document.querySelector(`.${piece}${color}Img${cellNumber}`);
     if(targetImg){
         targetImg.style.display = 'none;';
-        targetImg.classList.remove('apply-wrong-cell');
     }
 }
 

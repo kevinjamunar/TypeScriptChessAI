@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <title>Chetur - AI based chess</title>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="./css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700&display=swap" rel="stylesheet">        
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a class='kevin-link' href="https://www.linkedin.com/in/kevin-jamunar/" target="_blank">Kevin Jamunar</a>
+                <div class="title">Chetur
+                        <span class="subtitle">AI based chess</span>
+                </div>
+                    
+                <div class="main-nav">
+                    <a class="new-game" href="#">New Game</a>
+                    <a class="resign" href="#">Resign</a>
+                    <a class="switchColor" href="#">Switch Color</a>
+
+                    <span id="select-level" href="#">
+                        <a class="level-dropdown" href="" onclick="return false;"> Medium &darr;</a>
+                        <span class = "level-values">
+                            <a class='easy' href="#">Easy</a>
+                            <a class='medium' href="#">Medium</a>
+                            <a class='hard' href="#">Hard</a>
+                        </span>
+                    </span>
+
+                </div>
+                <div class="space"></div>
+            </nav>
+        </header>
+        <section class='game'>
+            <div class="board-wrapper">
+                <div class='player-check-modal'>
+                    <p>
+                        Protect Your King!
+                    </p>
+                </div>
+                 <div class='opponent-check-modal'>
+                    <p>
+                        Opponent In Check!
+                    </p>
+                </div>
+                 <div class='player-checkmate-modal'>
+                    <p>
+                        Checkmate! You Win!
+                    </p>
+                </div>
+                <div class='AI-checkmate-modal'>
+                    <p>
+                        Checkmate! Try Again.
+                    </p>
+                </div>
+                <div class='stalemate-modal'>
+                    <p>
+                        Stalemate! Game Drawn.
+                    </p>
+                </div>
+                <div class="board">
+                    <div class='cell cell-00 chess-light'></div>
+                    <div class='cell cell-01 chess-dark'></div>
+                    <div class='cell cell-02 chess-light'></div>
+                    <div class='cell cell-03 chess-dark'></div>
+                    <div class='cell cell-04 chess-light'></div>
+                    <div class='cell cell-05 chess-dark'></div>
+                    <div class='cell cell-06 chess-light'></div>
+                    <div class='cell cell-07 chess-dark'></div>
+
+                    <div class='cell cell-10 chess-dark'></div>
+                    <div class='cell cell-11 chess-light'></div>
+                    <div class='cell cell-12 chess-dark'></div>
+                    <div class='cell cell-13 chess-light'></div>
+                    <div class='cell cell-14 chess-dark'></div>
+                    <div class='cell cell-15 chess-light'></div>
+                    <div class='cell cell-16 chess-dark'></div>
+                    <div class='cell cell-17 chess-light'></div>
+
+                    <div class='cell cell-20 chess-light'></div>
+                    <div class='cell cell-21 chess-dark'></div>
+                    <div class='cell cell-22 chess-light'></div>
+                    <div class='cell cell-23 chess-dark'></div>
+                    <div class='cell cell-24 chess-light'></div>
+                    <div class='cell cell-25 chess-dark'></div>
+                    <div class='cell cell-26 chess-light'></div>
+                    <div class='cell cell-27 chess-dark'></div>
+
+                    <div class='cell cell-30 chess-dark'></div>
+                    <div class='cell cell-31 chess-light'></div>
+                    <div class='cell cell-32 chess-dark'></div>
+                    <div class='cell cell-33 chess-light'></div>
+                    <div class='cell cell-34 chess-dark'></div>
+                    <div class='cell cell-35 chess-light'></div>
+                    <div class='cell cell-36 chess-dark'></div>
+                    <div class='cell cell-37 chess-light'></div>
+
+                    <div class='cell cell-40 chess-light'></div>
+                    <div class='cell cell-41 chess-dark'></div>
+                    <div class='cell cell-42 chess-light'></div>
+                    <div class='cell cell-43 chess-dark'></div>
+                    <div class='cell cell-44 chess-light'></div>
+                    <div class='cell cell-45 chess-dark'></div>
+                    <div class='cell cell-46 chess-light'></div>
+                    <div class='cell cell-47 chess-dark'></div>
+
+                    <div class='cell cell-50 chess-dark'></div>
+                    <div class='cell cell-51 chess-light'></div>
+                    <div class='cell cell-52 chess-dark'></div>
+                    <div class='cell cell-53 chess-light'></div>
+                    <div class='cell cell-54 chess-dark'></div>
+                    <div class='cell cell-55 chess-light'></div>
+                    <div class='cell cell-56 chess-dark'></div>
+                    <div class='cell cell-57 chess-light'></div>
+
+                    <div class='cell cell-60 chess-light'></div>
+                    <div class='cell cell-61 chess-dark'></div>
+                    <div class='cell cell-62 chess-light'></div>
+                    <div class='cell cell-63 chess-dark'></div>
+                    <div class='cell cell-64 chess-light'></div>
+                    <div class='cell cell-65 chess-dark'></div>
+                    <div class='cell cell-66 chess-light'></div>
+                    <div class='cell cell-67 chess-dark'></div>
+
+                    <div class='cell cell-70 chess-dark'></div>
+                    <div class='cell cell-71 chess-light'></div>
+                    <div class='cell cell-72 chess-dark'></div>
+                    <div class='cell cell-73 chess-light'></div>
+                    <div class='cell cell-74 chess-dark'></div>
+                    <div class='cell cell-75 chess-light'></div>
+                    <div class='cell cell-76 chess-dark'></div>
+                    <div class='cell cell-77 chess-light'></div>
+                </div>
+                <div class = game-log-wrapper>
+                    <div class='game-log'></div>
+                </div>
+            </div>
+        </section>
+        <footer>
+                <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        </footer>
+        
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+        <script src="./bundle.js"></script>
+    </body>
+</html>
